@@ -326,20 +326,30 @@
   </footer>
 
   <script>
+    // Set current year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Theme toggle (persists)
-    const themeBtn = document.getElementById('themeBtn');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const saved = localStorage.getItem('theme');
-    if(saved){ document.documentElement.dataset.theme = saved; if(saved==='light'){document.documentElement.style.colorScheme='light'} }
-    themeBtn.addEventListener('click', () => {
-      const current = document.documentElement.dataset.theme || (prefersDark ? 'dark' : 'light');
-      const next = current === 'dark' ? 'light' : 'dark';
-      document.documentElement.dataset.theme = next;
-      document.documentElement.style.colorScheme = next;
-      localStorage.setItem('theme', next);
+  
+    // Theme toggle with persistence
+    const btn = document.getElementById('themeBtn');
+  
+    function setTheme(mode) {
+      document.documentElement.setAttribute('data-theme', mode);
+      document.documentElement.style.colorScheme = mode;
+      localStorage.setItem('theme', mode);
+      btn.textContent = mode === 'dark' ? '🌙' : '☀️';
+    }
+  
+    (function initTheme(){
+      const saved = localStorage.getItem('theme');
+      const system = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      setTheme(saved || system);
+    })();
+  
+    btn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      setTheme(current === 'dark' ? 'light' : 'dark');
     });
   </script>
+  
 </body>
 </html>
