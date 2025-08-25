@@ -30,6 +30,29 @@
         --brand: #5b50ff; --accent: #06b6d4; --ring: rgba(91,80,255,0.25); --shadow: 0 8px 24px rgba(0,0,0,0.08);
       }
     }
+       /* === Manual theme overrides (place AFTER your @media light block) === */
+    html[data-theme="dark"] {
+      --bg: #0b0c10;
+      --bg-soft: #12131a;
+      --text: #e6e7ee;
+      --muted: #a3a7b7;
+      --card: #10121a;
+      --brand: #6c63ff;
+      --accent: #22d3ee;
+      --ring: rgba(108,99,255,0.45);
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);}
+
+    html[data-theme="light"] {
+      --bg: #f8f9fc;
+      --bg-soft: #eef0f6;
+      --text: #0f1117;
+      --muted: #495266;
+      --card: #ffffff;
+      --brand: #5b50ff;
+      --accent: #06b6d4;
+      --ring: rgba(91,80,255,0.25);
+      --shadow: 0 8px 24px rgba(0,0,0,0.08);}
+
     @media (prefers-reduced-motion: reduce){ *{ animation: none !important; transition: none !important } }
 
     /* ====== Base ====== */
