@@ -3,12 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Omar Abbasi — Software Engineer</title>
-  <meta name="description" content="Software Engineer portfolio — Full‑Stack, Backend, Cloud. React/Node, Python, Java, SQL. Rutgers CS ’25." />
-  <meta name="color-scheme" content="dark light">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <title>Omar Abbasi — Portfolio</title>
+  <meta name="description" content="Early-career Software Engineer — Full-Stack (React/Node), Python, Java, SQL; learning Android (Kotlin). Rutgers CS ’25." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🍔</text></svg>">
+
   <style>
     /* ====== Theme ====== */
     :root {
@@ -100,9 +99,7 @@
     .spacer { height: 8px; }
     .muted { color: var(--muted); }
     .right { margin-left: auto; }
-
-    /* Theme toggle */
-    .toggle { cursor: pointer; border-radius: 10px; padding: 8px 10px; border: 1px solid color-mix(in oklab, var(--text) 14%, transparent); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
   </style>
 </head>
 <body>
@@ -140,40 +137,17 @@
     <!-- Hero -->
     <section class="hero" id="home">
       <div>
-        <h1>Software Engineer — Full‑Stack · Backend · Cloud</h1>
+        <h1>Software Engineer — Android • Backend • SQL</h1>
         <p>
-          CS @ Rutgers (’25). I build reliable software and data‑driven backends across React/Node, Python, Java, and SQL — with CI/CD, AWS/GCP, and Linux.
-          Seeking SWE roles where I can ship features end‑to‑end and improve performance, reliability, and developer experience.
+          Senior CS @ Rutgers (’25). I build practical apps and backends — from Android (Kotlin/Java) to Python and SQL.
+          Recently: <strong>RUBurgerApp</strong> (Android, Kotlin) with dynamic pricing & order management.
         </p>
         <div class="hero-ctas">
-          <a class="btn primary" href="#projects">See Work</a>
+          <a class="btn primary" href="#projects">View Projects</a>
+          <!-- TODO: replace with your resume PDF link -->
           <a class="btn" href="./Omar_Abbasi_Resume.pdf" target="_blank" rel="noopener">Download Résumé</a>
           <a class="btn" href="https://github.com/MOA343" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/in/ma9" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-
-      <!-- animated highlights ticker -->
-      <div class="ticker" aria-hidden="true" style="margin-top:14px">
-        <div class="ticker-track">
-          <span class="badge">React/Node</span>
-          <span class="badge">Python · FastAPI/Flask</span>
-          <span class="badge">Java · Spring (learning)</span>
-          <span class="badge">SQL · PostgreSQL/MySQL</span>
-          <span class="badge">AWS · GCP</span>
-          <span class="badge">Docker · Linux</span>
-          <span class="badge">CI/CD · GitHub Actions/Jenkins</span>
-          <span class="badge">Data Pipelines</span>
-
-          <!-- duplicate for seamless loop -->
-          <span class="badge">React/Node</span>
-          <span class="badge">Python · FastAPI/Flask</span>
-          <span class="badge">Java · Spring (learning)</span>
-          <span class="badge">SQL · PostgreSQL/MySQL</span>
-          <span class="badge">AWS · GCP</span>
-          <span class="badge">Docker · Linux</span>
-          <span class="badge">CI/CD · GitHub Actions/Jenkins</span>
-          <span class="badge">Data Pipelines</span>
+          <a class="btn" href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
     </section>
@@ -184,12 +158,8 @@
       <div class="grid grid-3">
         <!-- NYC Alert -->
         <article class="card">
-          <div class="media" title="NYC Alert demo">
-            <!-- Replace the src with your own GIF/MP4 link -->
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3JtdHV3dzlncWJxazY1Z3NiZmxidHBtcjVkeGgyMzRhd2MyM3BqNSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/qgQUggAC3Pfv687qPC/giphy.gif" alt="NYC Alert animated preview" loading="lazy"/>
-          </div>
-          <h3>NYC Alert <span class="meta">· Full‑Stack · Dec 2021 – Present</span></h3>
-          <p>Subscription system with Discord API + Python for real‑time stock/price alerts; scraped 1,000+ sites and integrated REST APIs; serving 300+ paying subscribers.</p>
+          <h3>RUBurgerApp <span class="meta">· Android (Kotlin) · May 2025</span></h3>
+          <p>Custom burger ordering app with dynamic pricing, order management (add/remove/clear/export), and unit tests.</p>
           <div class="tags">
             <span class="tag">Python</span><span class="tag">React</span><span class="tag">PostgreSQL</span><span class="tag">APIs</span>
           </div>
@@ -200,11 +170,8 @@
 
         <!-- Study Buddy -->
         <article class="card">
-          <div class="media" title="Study Buddy demo">
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTNsNWRsb2JxOTNsZTE1dmd4YnA2aGRrNTRxa3JqdmJscGhqNmg1YSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oKIP9GvV8sY7Qh7i8/giphy.gif" alt="Study Buddy animated preview" loading="lazy"/>
-          </div>
-          <h3>Study Buddy <span class="meta">· React/Node · Feb 2025 – May 2025</span></h3>
-          <p>AI multimedia tool that converts lectures to study cards using speech‑to‑text + OpenAI APIs (~90% acc.). Secure upload pipeline (Express + Multer) with JWT auth.</p>
+          <h3>NYC Alert <span class="meta">· Python/Flask</span></h3>
+          <p>Alerting pipeline pulling public data, storing in SQL, and sending notifications with simple dashboards.</p>
           <div class="tags">
             <span class="tag">React</span><span class="tag">Node</span><span class="tag">Express</span><span class="tag">JWT</span>
           </div>
@@ -213,13 +180,10 @@
           </div>
         </article>
 
-        <!-- 2048 Game -->
+        <!-- Project: Study Buddy (placeholder) -->
         <article class="card">
-          <div class="media" title="2048 demo">
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGZ4c2p6OWRjdmE1bGYzMnV5a3Njb2dzd2M0eG1kZ3Z6b2ozMGFlNiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/26xBukh5Rz2iD6UMB/giphy.gif" alt="2048 animated preview" loading="lazy"/>
-          </div>
-          <h3>2048 Game <span class="meta">· Java · Mar 2023 – Apr 2023</span></h3>
-          <p>Desktop implementation with Swing UI, score tracking, and clean OOP for tile/board logic.</p>
+          <h3>Study Buddy <span class="meta">· React/Node</span></h3>
+          <p>Study planner with spaced repetition and calendar sync; REST API backend with authentication.</p>
           <div class="tags">
             <span class="tag">Java</span><span class="tag">Swing</span><span class="tag">OOP</span>
           </div>
@@ -275,15 +239,51 @@
       </div>
     </section>
 
+    <!-- Experience -->
+    <section id="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Software Engineer — Safina Society <span class="meta">· Jan 2023 – Present · New Brunswick, NJ</span></h3>
+          <ul class="list">
+            <li>Built and scaled a podcast platform (AWS/GCP) reaching millions of views.</li>
+            <li>Designed PostgreSQL schemas for efficient media storage/retrieval.</li>
+            <li>Automated AI-based question classification, cutting manual sorting by ~95%.</li>
+            <li>Set up CI/CD and modular services, reducing deploy time by ~30%.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Customer Support Specialist — Home Depot <span class="meta">· Jun 2022 – Jan 2023 · Old Bridge, NJ</span></h3>
+          <ul class="list">
+            <li>Resolved issues using Java-based internal tools; improved CSAT by ~10%.</li>
+            <li>Co-developed a lightweight CRM feature to reduce ticket resolution time by ~20%.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Data Entry Specialist — HANAC <span class="meta">· Jun 2018 – Aug 2018 · New York, NY</span></h3>
+          <ul class="list">
+            <li>Maintained databases, inventory, and mailing systems for accurate records.</li>
+            <li>Automated weekly reporting with Excel formulas/macros.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <!-- Skills -->
     <section id="skills">
       <h2 class="section-title">Skills</h2>
       <div class="card">
-        <div class="row"><strong>Languages:</strong>&nbsp;Java, Python, C/C++, TypeScript, SQL</div>
-        <div class="row"><strong>Frameworks & Tools:</strong>&nbsp;React.js, Node.js, REST/gRPC, GraphQL, WebSockets, AWS, GCP, Linux, Git, GitHub Actions, Jenkins, Docker, CI/CD pipelines</div>
-        <div class="row"><strong>Databases:</strong>&nbsp;PostgreSQL, MySQL, MongoDB, Redis</div>
-        <div class="row"><strong>Core CS:</strong>&nbsp;Data Structures & Algorithms, OOP, Functional Programming, TDD (JUnit, pytest)</div>
-        <div class="row"><strong>Currently learning:</strong>&nbsp;Android (Kotlin), Spring Boot</div>
+        <div class="row">
+          <div>
+            <strong>Languages:</strong> Kotlin, Java, Python, SQL, JavaScript
+          </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="row">
+          <div>
+            <strong>Frameworks/Tools:</strong> AndroidX, Gradle (Kotlin DSL), Git, REST APIs, SQLite/PostgreSQL
+          </div>
+        </div>
       </div>
     </section>
 
@@ -291,7 +291,10 @@
     <section id="education">
       <h2 class="section-title">Education</h2>
       <div class="card">
-        <p><strong>Rutgers University — New Brunswick, NJ</strong><br/>B.A. in Computer Science · Aug 2025</p>
+        <p>
+          I’m Muhammad, a software engineer focused on shipping useful apps with clean, testable code. I enjoy
+          Android development, backend APIs, and data work. Open to SWE internships and new-grad roles.
+        </p>
       </div>
     </section>
 
@@ -299,10 +302,9 @@
     <section id="contact">
       <h2 class="section-title">Contact</h2>
       <div class="card">
-        <p>📞 <a href="tel:+19293030311">929‑303‑0311</a></p>
-        <p>📧 <a href="mailto:omarabbasi343@gmail.com">omarabbasi343@gmail.com</a></p>
-        <p>🐙 <a href="https://github.com/MOA343" target="_blank" rel="noopener">github.com/MOA343</a></p>
-        <p>💼 <a href="https://www.linkedin.com/in/ma9" target="_blank" rel="noopener">linkedin.com/in/ma9</a></p>
+        <p>Email: <a href="mailto:omarabbasi343@gmail.com">omarabbasi343@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/MOA343" target="_blank" rel="noopener">MOA343</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/ma9" target="_blank" rel="noopener">linkedin.com/in/…</a></p>
       </div>
     </section>
   </main>
@@ -313,12 +315,11 @@
         <span class="muted">© <span id="year"></span> Omar Abbasi</span>
         <a class="right" href="#home">Back to top ↑</a>
       </div>
-      <div class="muted" style="margin-top:8px">Built with semantic HTML/CSS, animated tastefully, and deployed on GitHub Pages.</div>
+      <div class="muted" style="margin-top:8px">Built with semantic HTML & CSS. Deploy on GitHub Pages.</div>
     </div>
   </footer>
 
   <script>
-    // Set current year
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Theme toggle (persists)
