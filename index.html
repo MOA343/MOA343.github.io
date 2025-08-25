@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omar Abbasi — Portfolio</title>
+  <meta name="description" content="Software Engineer portfolio — Android, Kotlin, Java, Python, SQL" />
+  <style>
+    /* ====== Base + Theme ====== */
+    :root {
+      --bg: #0c0c0f;
+      --bg-soft: #14141a;
+      --text: #e9e9ef;
+      --muted: #b6b6c6;
+      --card: #111118;
+      --brand: #7c5cff;
+      --brand-2: #53d3d1;
+      --ring: rgba(124,92,255,0.45);
+      --shadow: 0 10px 25px rgba(0,0,0,0.35);
+      --radius: 16px;
+      --maxw: 1100px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #fbfbfe;
+        --bg-soft: #f3f4f8;
+        --text: #111318;
+        --muted: #4b5563;
+        --card: #ffffff;
+        --brand: #5b3df5;
+        --brand-2: #0ea5a4;
+        --ring: rgba(91,61,245,0.35);
+        --shadow: 0 8px 20px rgba(0,0,0,0.08);
+      }
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg); color: var(--text); line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; background: var(--bg-soft); color: var(--muted); font-size: 12px; }
+    header { position: sticky; top: 0; backdrop-filter: saturate(180%) blur(8px); background: color-mix(in oklab, var(--bg) 75%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--text) 15%, transparent); z-index: 10; }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; }
+    .nav-links { display: flex; gap: 16px; font-weight: 600; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; border: 1px solid color-mix(in oklab, var(--text) 15%, transparent); background: var(--card); box-shadow: var(--shadow); transition: transform .15s ease, box-shadow .15s ease; }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
+    .btn.primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); border: none; color: white; }
+
+    /* Hero */
+    .hero { display: grid; grid-template-columns: 1fr; gap: 18px; padding: 42px 0 20px; }
+    .hero h1 { font-size: clamp(28px, 6vw, 48px); line-height: 1.1; margin: 0; }
+    .hero p { color: var(--muted); margin: 6px 0 0; max-width: 70ch; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
+
+    /* Sections */
+    section { padding: 28px 0; }
+    .section-title { font-size: 22px; margin: 0 0 14px; display:flex; align-items:center; gap:10px; }
+    .grid { display: grid; gap: 16px; }
+    @media (min-width: 720px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } .grid-2 { grid-template-columns: repeat(2, 1fr);} }
+
+    /* Cards */
+    .card { background: var(--card); border: 1px solid color-mix(in oklab, var(--text) 12%, transparent); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); display:flex; flex-direction:column; gap: 10px; }
+    .card h3 { margin: 0; font-size: 18px; }
+    .meta { color: var(--muted); font-size: 12px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+    .tag { font-size: 12px; padding: 4px 8px; border-radius: 999px; background: var(--bg-soft); color: var(--muted); }
+
+    /* Footer */
+    footer { border-top: 1px solid color-mix(in oklab, var(--text) 15%, transparent); margin-top: 32px; padding: 18px 0 36px; color: var(--muted); }
+
+    /* Utilities */
+    .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    .spacer { height: 8px; }
+    .muted { color: var(--muted); }
+    .right { margin-left: auto; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="row">
+          <span class="pill">🍔 Omar Abbasi</span>
+        </div>
+        <div class="nav-links">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div>
+        <h1>Software Engineer — Android • Backend • SQL</h1>
+        <p>
+          Senior CS @ Rutgers (’25). I build practical apps and backends — from Android (Kotlin/Java) to Python and SQL.
+          Recently: <strong>RUBurgerApp</strong> (Android, Kotlin) with dynamic pricing & order management.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <!-- TODO: replace with your resume PDF link -->
+          <a class="btn" href="./Omar_Abbasi_Resume.pdf" target="_blank" rel="noopener">Download Résumé</a>
+          <a class="btn" href="https://github.com/MOA343" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="grid grid-3">
+        <!-- Project: RUBurgerApp -->
+        <article class="card">
+          <h3>RUBurgerApp <span class="meta">· Android (Kotlin) · May 2025</span></h3>
+          <p>Custom burger ordering app with dynamic pricing, order management (add/remove/clear/export), and unit tests.</p>
+          <div class="tags">
+            <span class="tag">Kotlin</span><span class="tag">AndroidX</span><span class="tag">RecyclerView</span><span class="tag">JUnit</span>
+          </div>
+          <div class="row">
+            <a class="btn" href="https://github.com/MOA343/RUBurgerApp" target="_blank" rel="noopener">Source</a>
+            <!-- TODO: add Play Store / demo link if any -->
+          </div>
+        </article>
+
+        <!-- Project: NYC Alert (placeholder) -->
+        <article class="card">
+          <h3>NYC Alert <span class="meta">· Python/Flask</span></h3>
+          <p>Alerting pipeline pulling public data, storing in SQL, and sending notifications with simple dashboards.</p>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQL</span>
+          </div>
+          <div class="row">
+            <a class="btn" href="#" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+
+        <!-- Project: Study Buddy (placeholder) -->
+        <article class="card">
+          <h3>Study Buddy <span class="meta">· React/Node</span></h3>
+          <p>Study planner with spaced repetition and calendar sync; REST API backend with authentication.</p>
+          <div class="tags">
+            <span class="tag">React</span><span class="tag">Node</span><span class="tag">JWT</span>
+          </div>
+          <div class="row">
+            <a class="btn" href="#" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="card">
+        <div class="row">
+          <div>
+            <strong>Languages:</strong> Kotlin, Java, Python, SQL, JavaScript
+          </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="row">
+          <div>
+            <strong>Frameworks/Tools:</strong> AndroidX, Gradle (Kotlin DSL), Git, REST APIs, SQLite/PostgreSQL
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2 class="section-title">About</h2>
+      <div class="card">
+        <p>
+          I’m Muhammad, a software engineer focused on shipping useful apps with clean, testable code. I enjoy
+          Android development, backend APIs, and data work. Open to SWE internships and new-grad roles.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:omarabbasi343@gmail.com">omarabbasi343@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/MOA343" target="_blank" rel="noopener">MOA343</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/ma9" target="_blank" rel="noopener">linkedin.com/in/…</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <span class="muted">© <span id="year"></span> Omar Abbasi</span>
+        <a class="right" href="#home">Back to top ↑</a>
+      </div>
+      <div class="muted" style="margin-top:8px">Built with semantic HTML & CSS. Deploy on GitHub Pages.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+y</body>
+</html>
+
+
