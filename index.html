@@ -107,7 +107,7 @@
       radial-gradient(900px 600px at 90% 10%, rgba(34,211,238,.12), transparent 55%),
       var(--bg);
     transform: translateY(0);
-    animation: introSweep .75s cubic-bezier(.22,.61,.36,1) .15s forwards;
+    animation: introSweep 1s cubic-bezier(.22,.61,.36,1) .15s forwards;
     will-change: transform, opacity;
   }
   @keyframes introSweep { 
@@ -118,7 +118,7 @@
   .animate-in [data-animate] {
     opacity: 0;
     transform: translateY(10px) scale(.98);
-    animation: riseIn .55s cubic-bezier(.22,.61,.36,1) both;
+    animation: riseIn .75s cubic-bezier(.22,.61,.36,1) both;
   }
   @keyframes riseIn {
     to { opacity: 1; transform: none; }
@@ -383,7 +383,7 @@
       setTheme(current === 'dark' ? 'light' : 'dark');
     });
 
-    
+
   (function fancyEnter(){
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -396,11 +396,11 @@
     document.documentElement.classList.add('animate-in');
     const seq = document.querySelectorAll('[data-animate]');
     seq.forEach((el, i) => {
-      el.style.animationDelay = `${220 + i * 80}ms`; // start after curtain, then stagger
+      el.style.animationDelay = `${280 + i * 90}ms`; // start after curtain, then stagger
     });
 
     // clean up the layer after animation
-    setTimeout(() => layer.remove(), 1000);
+    setTimeout(() => layer.remove(), 1400);
   })();
   </script>
   
