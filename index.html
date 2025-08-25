@@ -84,8 +84,23 @@
     .tag { font-size: 12px; padding: 4px 8px; border-radius: 999px; background: color-mix(in oklab, var(--text) 8%, transparent); color: var(--muted); border: 1px solid color-mix(in oklab, var(--text) 10%, transparent); }
 
     /* GIF / media frame */
-    .media { aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; border: 1px solid color-mix(in oklab, var(--text) 10%, transparent); background: var(--bg-soft); display:grid; place-items:center; }
-    .media img, .media video { width: 100%; height: 100%; object-fit: cover; display:block; }
+    .media {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-width: 340px;   /* ← make all previews smaller; try 320px or 300px */
+    margin: 0 auto;     /* center the bubble in the card */
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid color-mix(in oklab, var(--text) 10%, transparent);
+    background: var(--bg-soft);
+    display: grid;
+    place-items: center;}
+    .media img,
+    .media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;}
 
     /* Timeline list */
     .list { margin: 0; padding-left: 18px; }
