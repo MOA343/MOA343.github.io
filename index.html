@@ -70,8 +70,12 @@
 
     /* Logo (SVG monogram) */
     .logo { display:flex; align-items:center; gap:10px; font-weight: 800; letter-spacing: .3px; }
-    .logo svg { width: 28px; height: 28px; filter: drop-shadow(0 6px 14px rgba(108,99,255,0.35)); }
-
+    .logo svg { width: 48; height: 48px; filter: drop-shadow(0 6px 14px rgba(108,99,255,0.35)); }
+    .logo span {
+    font-size: clamp(18px, 2.4vw, 24px);
+    font-weight: 800;
+    letter-spacing: .2px;
+    }
     .nav-links { display: flex; gap: 14px; font-weight: 600; }
     .nav-links a { padding: 8px 10px; border-radius: 10px; }
     .nav-links a:hover { background: color-mix(in oklab, var(--text) 9%, transparent); }
@@ -110,8 +114,8 @@
   /* optional: smooth theme/background text transitions */
     body {
     transition: background-color .25s ease, color .25s ease;
-  }
-}
+    }
+    }
     /* ====== Sections ====== */
     section { padding: 28px 0; }
     .section-title { font-size: 22px; margin: 0 0 14px; display:flex; align-items:center; gap:10px; }
